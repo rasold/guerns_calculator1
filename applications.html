@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url('beautiful.avif');
+            background-size: cover;
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            font-family: arial;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="applications_container">
+        <div class="application_buttons">
+            <button class="open-calculator" id="open_calc">
+                <img src="images/calc1.webp">
+            </button>
+        </div>
+
+        <div class="applications">
+            <div class="calculator-container">
+                <div class="calculator">
+                    <button class="close-calculator" id="close_calc">Close</button>
+                    <div class="display_div">
+                        <input type="text" id="display_calc_fig" readonly placeholder="0" class="display" maxlength="15">
+                    </div>
+                    <div class="func_buttons">
+
+                        <div class="first-layer buttons_div padding">
+                            <button class="light_grey" onclick="clearDisplay()">AC</button>
+                            <button class="light_grey" onclick="changeSign()">+/-</button>
+                            <button class="light_grey" onclick="calculatePercentage()">%</button>
+                            <button class="orange" onclick="appendToDisplay('/')">/</button>
+                        </div>
+
+                        <div class="second-layer buttons_div padding">
+                            <button class="dark-color" onclick="appendToDisplay('7')">7</button>
+                            <button class="dark-color" onclick="appendToDisplay('8')">8</button>
+                            <button class="dark-color" onclick="appendToDisplay('9')">9</button>
+                            <button class="orange" onclick="appendToDisplay('*')">X</button>
+                        </div>
+
+                        <div class="third-layer buttons_div padding">
+                            <button class="dark-color" onclick="appendToDisplay('4')">4</button>
+                            <button class="dark-color" onclick="appendToDisplay('5')">5</button>
+                            <button class="dark-color" onclick="appendToDisplay('6')">6</button>
+                            <button class="orange" onclick="appendToDisplay('-')">-</button>
+                        </div>
+
+                        <div class="fourth-layer buttons_div padding">
+                            <button class="dark-color" onclick="appendToDisplay('1')">1</button>
+                            <button class="dark-color" onclick="appendToDisplay('2')">2</button>
+                            <button class="dark-color" onclick="appendToDisplay('3')">3</button>
+                            <button class="orange" onclick="appendToDisplay('+')">+</button>
+                        </div>
+
+                        <div class="fifth-layer padding">
+                            <button class="zero dark-color" onclick="appendToDisplay('0')">0</button>
+                            <button class="last dark-color" onclick="appendToDisplay('.')">.</button>
+                            <button class="dark-color" onclick="deleteOneFigure()">Del</button>
+                            <button class="last orange" onclick="calculateResult()">=</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="script/app.js"></script>
+</html>
